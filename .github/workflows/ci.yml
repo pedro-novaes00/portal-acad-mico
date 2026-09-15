@@ -1,0 +1,24 @@
+name: CI - Testes do Portal
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  testes:
+    name: Testes do Portal
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obter o codigo
+        uses: actions/checkout@v7
+
+      - name: Preparar o JavaScript
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Executar testes
+        run: node teste.js
