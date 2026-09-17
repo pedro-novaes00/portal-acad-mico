@@ -13,7 +13,8 @@ function verificar(descricao, resultado, esperado) {
 verificar("Média de 8 e 6", calcularMedia(8, 6), 7);
 verificar("Média de 10 e 10", calcularMedia(10, 10), 10);
 verificar("Aluno com média 6", verificarSituacao(6), "Aprovado");
-verificar("Aluno com média 5", verificarSituacao(5), "Reprovado");
+verificar("Aluno com média 5", verificarSituacao(5), "Recuperação");
+
 if (erros === 0) {
     console.log("Todos os testes passaram.");
     process.exit(0);
