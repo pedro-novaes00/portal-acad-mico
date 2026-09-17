@@ -10,3 +10,10 @@ function verificarSituacao(media) {
  }
  return "Reprovado";
 }
+
+if (typeof module !== "undefined") {
+    module.exports = {
+        calcularMedia,
+        verificarSituacao
+    };
+}
